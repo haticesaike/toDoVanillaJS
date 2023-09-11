@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.body {
+  min-height: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  z-index: -1;
+}
+.top-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 3;
+  background: url("./images/image2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  opacity: 0.8;
+}
+.top-side-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 10px auto;
+}
+.title {
+  margin: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #767575;
+  font-family: "Archivo Black", sans-serif;
+}
+.new-task {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+.addTaskButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.circle-icon {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  padding: 7px;
+  color: #767575;
+  border-radius: 5px 0px 0px 5px;
+}
+.circle-icon:hover {
+  background-color: #767575;
+  color: white;
+}
+.input {
+  width: 50%;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  outline: none;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.bottom-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 3;
+  /* background-color: #fcf1d9; */
+  background: linear-gradient(to bottom, #fcf1d9, #adceb1);
+}
+
+.todo-container {
+  width: 40%;
+  background-color: white;
+  border-radius: 5px;
+  height: 70%;
+  overflow-y: auto;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d2d0d0;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.todo-task {
+  font-size: 20px;
+  font-family: "Archivo Black", sans-serif;
+  color: #767575;
+}
+.todo-right {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-delete {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: "Archivo Black", sans-serif;
+  color: #767575;
+  cursor: pointer;
+}
+.todo-delete:hover {
+  background-color: rgba(169, 101, 101, 0.862);
+  color: white;
+}
+.todo-edit {
+  background-color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-family: "Archivo Black", sans-serif;
+  color: #767575;
+  cursor: pointer;
+}
+.todo-edit:hover {
+  background-color: #767575;
+  color: white;
+}
+
+.checkbox:checked + .todo-task {
+  text-decoration: line-through;
+  color: #767575;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.todo-edit-div {
+  display: flex;
+  width: 100%;
+  justify-content: inherit;
+  gap: 40px;
+}
+
+.todo-edit-input {
+  flex: 4;
+  width: fit-content;
+  border: white solid 1px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #d2d0d0;
+  font-family: "Archivo Black", sans-serif;
+  color: #767575;
+}
+
+.todo-edit-button {
+  flex: 1;
+  background-color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-family: "Archivo Black", sans-serif;
+  color: #767575;
+  cursor: pointer;
+}
+.todo-edit-button:hover {
+  background-color: #767575;
+  color: white;
+}

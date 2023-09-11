@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to do Vanilla</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-side">
+        <div class="top-side-cover">
+          <div class="title">TO DO</div>
+          <div class="new-task">
+            <button
+              onclick="addTask()"
+              class="addTaskButton"
+              id="addTaskButton"
+            >
+              <span class="material-symbols-outlined circle-icon"
+                >add_circle</span
+              >
+            </button>
+            <input
+              type="text"
+              class="input"
+              placeholder="Create a new todo..."
+              id="input"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-side">
+        <div class="todo-container">
+          <div class="todo">
+            <div class="todo-left">
+              <input type="checkbox" class="checkbox" id="checkbox" />
+              <span class="todo-task">Complete task</span>
+            </div>
+            <div class="todo-right">
+              <button
+                onclick="deleteTask(
+                this.parentElement.parentElement
+              )"
+                class="todo-delete"
+              >
+                Delete
+              </button>
+              <button
+                onclick="editTask(this.parentElement.parentElement)"
+                class="todo-edit"
+              >
+                Edit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
